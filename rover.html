@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chandrayaan 3 Control</title>
+</head>
+<body>
+
+  <h1>Chandrayaan 3 Control</h1>
+  <p>Pl. note: You have to input direction in which TOP of spacecraft initially points along with the initial FRONT direction.</p>
+  <p>Assumption: The spacecraft turns 90 deg towards the direction in which it's top points at that time when command 'u' is given.</p>
+  <p>The spacecraft turns 90 deg opposite to the direction in which it's top points at that time when command 'd' is given.</p>
+  <p>You can see the spacecrafts position, direction of FRONT and TOP after every command in the browser's console output.</p>
+  <form id="chandrayaanForm">
+    <label for="initialX">Initial x-coordinate:</label>
+    <input type="number" id="initialX" required><br><br>
+
+    <label for="initialY">Initial y-coordinate:</label>
+    <input type="number" id="initialY" required><br><br>
+
+    <label for="initialZ">Initial z-coordinate:</label>
+    <input type="number" id="initialZ" required><br><br>
+
+    <label for="initialFrontDirection">Initial direction of front of spacecraft(N, S, E, W, Up, Down):</label>
+    <input type="text" id="initialFrontDirection" required><br><br>
+
+    <label for="initialTopDirection">Initial direction of top of spacecraft(N, S, E, W, Up, Down):</label>
+    <input type="text" id="initialTopDirection" required><br><br>
+
+    <label for="movementCommands">Movement commands (e.g., f, r, u, b, l):</label>
+    <input type="text" id="movementCommands" required><br><br>
+
+    <input type="submit" value="Execute Commands">
+  </form>
+
+  <h2>Result:</h2>
+  <p id="result"></p>
+
+  <script src="./script.js">
+  </script>
+</body>
+</html>
